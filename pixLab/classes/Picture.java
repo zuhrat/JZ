@@ -112,10 +112,10 @@ public class Picture extends SimplePicture
   public void negate() {
     Pixel[][] p = this.getPixels2D();
     for (Pixel[] i : p) {
-      for (j : i) {
+      for (int j : i) {
         j.setRed(j.getRed() - 255);
         j.setGreen(j.getGreet() - 255);
-        j.setBlue(j.getBlue() - 255)
+        j.setBlue(j.getBlue() - 255);
       }
     }
   }
@@ -123,7 +123,7 @@ public class Picture extends SimplePicture
   public void grayscale() {
     Pixel[][] p = this.getPixels2D();
     for (Pixel[] i : p) {
-      for (j : i) {
+      for (int j : i) {
         int avg = (int) ( (j.getRed() + j.getGreen() + j.getBlue()) / 3);
         j.setRed(avg);
         j.setBlue(avg);
@@ -255,6 +255,29 @@ public class Picture extends SimplePicture
         toPixel.setColor(fromPixel.getColor());
       }
     }   
+  }
+
+  public void copy2(Picture fromPic, int startRow, int endRow, int startCol, int endCol)
+  {
+    Pixel fromPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+    for (int fromRow = startRow, toRow = endRow; 
+         fromRow < fromPixels.length &&
+         toRow < toPixels.length; 
+         fromRow++, toRow++)
+    {
+      for (int fromCol = startCol, toCol = endCol; 
+           fromCol < fromPixels[0].length &&
+           toCol < toPixels[0].length;  
+           fromCol++, toCol++)
+      {
+        fromPixel = fromPixels[fromRow][fromCol];
+        toPixel = toPixels[toRow][toCol];
+        toPixel.setColor(fromPixel.getColor());
+      }
+    }
   }
 
   /** Method to create a collage of several pictures */

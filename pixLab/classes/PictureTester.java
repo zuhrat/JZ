@@ -103,6 +103,16 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+
+    public static void copy2Tester(){
+	Picture swan = new Picture("swan.jpg");
+	swan.copy2(swan,20,40,20,40);
+	Picture canvas = new Picture("640x480.jpg");
+	canvas.copy2(canvas,20,40,20,40);
+	Picture snowman = new Picture("snowman.jpg");
+	snowman.copy2(snowman,20,40,20,40);
+	
+    }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
