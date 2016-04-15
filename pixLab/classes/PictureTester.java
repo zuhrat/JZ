@@ -62,6 +62,7 @@ public class PictureTester
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+
   }
    
    public static void testMirrorHorizontal()
@@ -137,7 +138,7 @@ public class PictureTester
     testCollage();
     testMirrorHorizontal();
     testMirrorHorizontal();
-    //testCopy();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();

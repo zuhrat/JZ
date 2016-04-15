@@ -102,7 +102,7 @@ public class Picture extends SimplePicture
   {
     Pixel[][] p = this.getPixels2D();
     for (Pixel[] i : p){
-      for (Pixek j : i) {
+      for (Pixel j : i) {
         j.setRed(0);
         j.setGreen(0);
       }
@@ -112,9 +112,9 @@ public class Picture extends SimplePicture
   public void negate() {
     Pixel[][] p = this.getPixels2D();
     for (Pixel[] i : p) {
-      for (int j : i) {
+      for (Pixel j : i) {
         j.setRed(j.getRed() - 255);
-        j.setGreen(j.getGreet() - 255);
+        j.setGreen(j.getGreen() - 255);
         j.setBlue(j.getBlue() - 255);
       }
     }
@@ -123,7 +123,7 @@ public class Picture extends SimplePicture
   public void grayscale() {
     Pixel[][] p = this.getPixels2D();
     for (Pixel[] i : p) {
-      for (int j : i) {
+	for (Pixel j : i) {
         int avg = (int) ( (j.getRed() + j.getGreen() + j.getBlue()) / 3);
         j.setRed(avg);
         j.setBlue(avg);
@@ -237,20 +237,20 @@ public class Picture extends SimplePicture
 
 	for (int i = 158; i<mirrorPoint; i++) {
 	    for (int j = 103; j<170; j++){
-		topPixel = pixels[i][j];
-		int x = mirrorPoint - i + mirrorPoint[j];
-		bottomPixel = pixels[x];
+		topPixel = pixel[i][j];
+		int x = mirrorPoint - i + mirrorPoint;
+		bottomPixel = pixel[x][j];
 		bottomPixel.setColor(topPixel.getColor());
 	    }}
 	int mirrorPoint2 = 198;
 	Pixel topPixel2 = null;
 	Pixel bottomPixel2 = null;
 
-	for (int k=171; i<mirrorPoint2; i++){
-	    for (int l= 239; j<294; j++){
-		topPixel2=pixels[k][l];
-		int x2 = mirrorPoint2 - i + mirrorPoint2[l];
-		bottomPixel2 = pixels[x2];
+	for (int k=171; k<mirrorPoint2; k++){
+	    for (int l= 239; l<294; l++){
+		topPixel2=pixel[k][l];
+		int x2 = mirrorPoint2 - k + mirrorPoint2;
+		bottomPixel2 = pixel[x2][l];
 		bottomPixel2.setColor(topPixel2.getColor());}}}
 		
 
