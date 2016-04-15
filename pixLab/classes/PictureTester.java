@@ -17,6 +17,27 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testKeepOnlyBlue() {
+    Picture a = new Picture("beach.jpg");
+    a.explore();
+    a.keepOnlyBlue();
+    a.explore();
+  }
+
+  public static void testNegate() {
+    Picture a = new Picture("beach.jpg");
+    a.explore();
+    a.negate();
+    a.explore();
+  }
+
+  public static void testGrayscale(){
+    Picture a = new Picture("beach.jpg");
+    a.explore();
+    a.grayscale();
+    a.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -70,7 +91,7 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
