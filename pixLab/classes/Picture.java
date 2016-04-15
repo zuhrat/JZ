@@ -205,9 +205,10 @@ public class Picture extends SimplePicture
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
   {
-    int mirrorPoint = 276;
-    Pixel leftPixel = null;
-    Pixel rightPixel = null;
+ 
+     int mirrorPoint = 276;
+     Pixel leftPixel = null;
+     Pixel rightPixel = null;
     int count = 0;
     Pixel[][] pixels = this.getPixels2D();
     
@@ -222,9 +223,38 @@ public class Picture extends SimplePicture
         rightPixel = pixels[row]                       
                          [mirrorPoint - col + mirrorPoint];
         rightPixel.setColor(leftPixel.getColor());
+	count+=1;
       }
+      System.out.println(count);
     }
   }
+
+    public void mirrorArms() {
+	int mirrorPoint = 193;
+	Pixel topPixel = null;
+	Pixel bottomPixel = null;
+	Pixel[][] pixel = this.getPixels2D();
+
+	for (int i = 158; i<mirrorPoint; i++) {
+	    for (int j = 103; j<170; j++){
+		topPixel = pixels[i][j];
+		int x = mirrorPoint - i + mirrorPoint[j];
+		bottomPixel = pixels[x];
+		bottomPixel.setColor(topPixel.getColor());
+	    }}
+	int mirrorPoint2 = 198;
+	Pixel topPixel2 = null;
+	Pixel bottomPixel2 = null;
+
+	for (int k=171; i<mirrorPoint2; i++){
+	    for (int l= 239; j<294; j++){
+		topPixel2=pixels[k][l];
+		int x2 = mirrorPoint2 - i + mirrorPoint2[l];
+		bottomPixel2 = pixels[x2];
+		bottomPixel2.setColor(topPixel2.getColor());}}}
+		
+
+    
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
