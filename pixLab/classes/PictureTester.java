@@ -82,10 +82,10 @@ public class PictureTester
   
    public static void testMirrorArms()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorArms();
-    caterpillar.explore();
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
   }
   
   /** Method to test the collage method */
