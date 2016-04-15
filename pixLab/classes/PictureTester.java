@@ -39,6 +39,14 @@ public class PictureTester
   }
   
   /** Method to test mirrorVertical */
+    public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+  
   public static void testMirrorVertical()
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
@@ -80,17 +88,18 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
     testZeroBlue();
-    //testKeepOnlyBlue();
+    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
+    testNegate();
+    testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical();
+    testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
+    testMirrorVerticalRightToLeft();
     testCollage();
     //testCopy();
     //testEdgeDetection();
