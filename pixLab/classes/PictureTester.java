@@ -107,9 +107,18 @@ public class PictureTester
 
     public static void testCopy2(){
         
-    Picture canvas1 = new Picture("640x480.jpg");
-    canvas1.createCollage2();
-    canvas1.explore();
+	Picture canvas1 = new Picture("640x480.jpg");
+	canvas1.createCollage2();
+	canvas1.explore();
+    }
+    
+    public static void testMyCollage(){
+        
+	Picture canvas2 = new Picture("640x480.jpg");
+	canvas2.createMyCollage();
+	canvas2.explore();
+
+
     }
   
   /** Main method for testing.  Every class can have a main
@@ -119,23 +128,24 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    testKeepOnlyBlue();
+    //testZeroBlue();
+    //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    testNegate();
-    testGrayscale();
+    //testNegate();
+    //testGrayscale();
     //testFixUnderwater();
-    testMirrorVertical();
+    //testMirrorVertical();
     //testMirrorTemple();
-    testMirrorArms();
+    //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    testMirrorVerticalRightToLeft();
-    testCollage();
-    testMirrorHorizontal();
-    testMirrorHorizontal();
-    testCopy2();
+    //testMirrorVerticalRightToLeft();
+    //testCollage();
+    //testMirrorHorizontal();
+    //testMirrorHorizontal();
+    //testCopy2();
+    testMyCollage();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
