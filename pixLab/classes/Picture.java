@@ -252,6 +252,20 @@ public class Picture extends SimplePicture
 		int x2 = mirrorPoint2 - k + mirrorPoint2;
 		bottomPixel2 = pixel[x2][l];
 		bottomPixel2.setColor(topPixel2.getColor());}}}
+
+    public void mirrorGull(){
+	int mirrorPoint = 345;
+	Pixel right = null;
+	Pixel left = null;
+	Pixel[][] pixels = this.getPixel2D();
+
+	for (int i = 235; i < 323; i++){
+	    for (int j = 238; j < mirrorPoint; j++) {
+		right = pixels[i][j];
+		left = pixels[i][mirrorPoint - j + mirrorPoint];
+		left.setColor(right.getColor());}}}
+
+    
 		
 
     
