@@ -254,10 +254,10 @@ public class Picture extends SimplePicture
 		bottomPixel2.setColor(topPixel2.getColor());}}}
 
     public void mirrorGull(){
-	int mirrorPoint = 345;
+	int mirrorPoint = 350;
 	Pixel right = null;
 	Pixel left = null;
-	Pixel[][] pixels = this.getPixel2D();
+	Pixel[][] pixels = this.getPixels2D();
 
 	for (int i = 235; i < 323; i++){
 	    for (int j = 238; j < mirrorPoint; j++) {
@@ -307,14 +307,14 @@ public class Picture extends SimplePicture
 	Pixel toPixel = null;
 	Pixel[][] toPixels = this.getPixels2D();
 	Pixel[][] fromPixels = fromPic.getPixels2D();
-	for (int fromRow = startRow, toRow = endRow; 
+	for (int fromRow = 0, toRow = startRow; 
 	     fromRow < fromPixels.length &&
-		 toRow < toPixels.length; 
+		 toRow < endRow; 
 	     fromRow++, toRow++)
 	    {
-		for (int fromCol = startCol, toCol = endCol; 
+		for (int fromCol = 0, toCol = startCol; 
 		     fromCol < fromPixels[0].length &&
-			 toCol < toPixels[0].length;  
+			 toCol < endCol; 
 		     fromCol++, toCol++)
 		    {
 			fromPixel = fromPixels[fromRow][fromCol];
